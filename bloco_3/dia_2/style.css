@@ -1,0 +1,33 @@
+h1 { 
+    font-size:65px ;
+    color: orange;
+    font-family: sans-serif;
+}
+
+#lista {
+    background-color: rgb(0, 255, 221);
+}
+.bg {
+    background-color: tomato;
+}
+
+p {
+    font-weight: 600; font-size: 3em;
+    font-style: normal;
+    line-height: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+body {
+    font-size: 16px;
+}
+#amarelo {
+    color: yellow;
+}
+#vermelho {
+    color: red;
+}
+
+#marrom {
+    color: brown;
+}
