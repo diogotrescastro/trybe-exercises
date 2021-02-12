@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    background-color:cadetblue;
+    transition:ease-in-out;
+}
+
+li:active{
+    font-family: sans-serif;
+    transition:ease-in-out;
+}
+
+ul, ol {
+    list-style: none;
+}
