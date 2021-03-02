@@ -81,8 +81,31 @@ console.log();
 /*Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
 Valor esperado no retorno da função: 2*/
 
+//PARA REALIZAÇÃO FOI NECESSÁRIA CONSULTA AO GABARITO DISPONIBILIZADO PELA TRYBE
+//https://app.betrybe.com/course/fundamentals/javascript/js-features/js-part-4-solutions#exercicio-5
+
+
+console.log("EXERCICIO 5, PARTE II");
+
 function maisRepetido (numeros){
-  let contador =0;
-  let numero = 0;
-  let 
+  let countRepeat = {};
+  let countNumber = 0;
+  let indexRepeat = 0;
+  
+  for (let indexN in numeros){
+    let verify = numeros[indexN];
+    for (let indexN2 in numeros){
+      if (verify === numeros[indexN2]){
+        countNumber += 1;
+      }
+    }
+    if (countNumber > countRepeat){
+      countRepeat = countNumber;
+      indexRepeat = indexN;
+    }
+    countNumber = 0;
+  }
+  return numeros[indexRepeat];
 }
+
+console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
