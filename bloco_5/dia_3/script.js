@@ -60,6 +60,7 @@ function holidays(Feriados){
 holidays("Feriados");
 
 //3
+// Foi necessária consulta ao gabarito da questão.
 
 function changeHolidays () {
   let btnHolidays = document.querySelector('#btn-holiday');
@@ -80,21 +81,15 @@ function changeHolidays () {
 
 changeHolidays();
 
-// function displayHolidays() {
-//   let getHolidayButton = document.querySelector('#btn-holiday');
-//   let getHolidays = document.querySelectorAll('.holiday')
-//   let backgroundColor = 'rgb(238,238,238)';
-//   let setNewColor = 'white';
+//4
+function fridays(Sextas){
+  let btnFriday = document.createElement('button');
+  let btnFridayId = 'btn-friday';
+  let btnFridayContainer = document.querySelector('.buttons-container');
 
-//   getHolidayButton.addEventListener('click', function() {
-//     for (let index = 0; index < getHolidays.length; index += 1) {
-//       if (getHolidays[index].style.backgroundColor === setNewColor) {
-//         getHolidays[index].style.backgroundColor = backgroundColor;
-//       } else {
-//         getHolidays[index].style.backgroundColor = setNewColor;
-//       }
-//     }
-//   })
-// };
+  btnFriday.innerHTML = Sextas;
+  btnFriday.id = btnFridayId;
+  btnFridayContainer.appendChild(btnFriday);
+}
 
-// displayHolidays();
+fridays("Sexta-feira");
