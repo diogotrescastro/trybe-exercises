@@ -159,3 +159,19 @@ function taskLegend (cor){
 }
 
 taskLegend('blue');
+
+//9
+function eventTask () {
+  let targetTask = document.querySelector('.task');
+  let changeClass = document.getElementsByClassName('task selected');
+
+  targetTask.addEventListener('click', function(event) {
+      if ( changeClass === 0){
+        event.target.className = "task selected";
+      } else {
+        event.target.className = "task";
+      }
+    })
+}; 
+
+eventTask();
