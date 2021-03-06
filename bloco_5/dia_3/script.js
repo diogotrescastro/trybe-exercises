@@ -135,3 +135,15 @@ function dayOut() {
 
 dayIn();
 dayOut();
+
+
+//7
+function task (tarefa) {
+  let newTask = document.createElement("span");
+  let localTask = document.querySelector('.my-tasks');
+
+  newTask.innerHTML = tarefa;
+  localTask.appendChild(newTask);
+};
+
+task();
