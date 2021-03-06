@@ -113,3 +113,25 @@ function changeFridays (sextou) {
 
 let dezFridaysList = [ 4, 11, 18, 25];
 changeFridays(dezFridaysList);
+
+//6
+// Foi necessária consulta ao gabarito da questão.
+// Consulta complementar https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+function dayIn() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+  })
+};
+
+function dayOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+  })
+};
+
+dayIn();
+dayOut();
