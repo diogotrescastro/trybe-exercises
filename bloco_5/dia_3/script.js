@@ -93,3 +93,23 @@ function fridays(Sextas){
 }
 
 fridays("Sexta-feira");
+
+//5
+function changeFridays (sextou) {
+  let btnFridays = document.querySelector('#btn-friday');
+  let setFridays = document.querySelectorAll('.friday');
+  let changeText = 'Sextou';
+
+  btnFridays.addEventListener('click', function() {
+    for (let index = 0; index < setFridays.length; index += 1){
+      if (setFridays[index].innerHTML !== changeText){
+        setFridays[index].innerHTML = changeText;
+      } else {
+        setFridays[index].innerHTML = sextou[index];
+      }
+     }
+    })
+}; 
+
+let dezFridaysList = [ 4, 11, 18, 25];
+changeFridays(dezFridaysList);
