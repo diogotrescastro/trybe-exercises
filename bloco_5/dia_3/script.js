@@ -146,4 +146,16 @@ function task (tarefa) {
   localTask.appendChild(newTask);
 };
 
-task();
+task("teste");
+
+//8
+
+function taskLegend (cor){
+  let divLegend = document.createElement("div");
+  let divLocalTask = document.querySelector('.my-tasks');
+  divLegend.className = "task";
+  divLegend.style.backgroundColor = cor;
+  divLocalTask.appendChild(divLegend);
+}
+
+taskLegend('blue');
