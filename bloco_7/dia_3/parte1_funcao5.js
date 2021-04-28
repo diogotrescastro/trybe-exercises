@@ -1,3 +1,5 @@
+// 5 Compare dois objetos (JSON) para verificar se são idênticos ou não
+
 const assert = require('assert');
 
 const obj1 = {
