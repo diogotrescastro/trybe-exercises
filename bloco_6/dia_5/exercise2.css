@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Telas até 600px */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: aliceblue;
+    font-family: sans-serif;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  p {
+    padding: 0 5px;
+    line-height: 1.5em;
+  }
+}
+
+  /* Telas maiores que 600px */
+  @media screen and (min-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  
+    .container {
+      flex-wrap: wrap;
+    }
+  }
+
+/* Telas maiores que 1000px */ 
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color:lightskyblue;
+  }
+
+  .container {
+    flex-wrap: nowrap;
+  }
+}

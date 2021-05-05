@@ -1,0 +1,46 @@
+body {
+    font-size:x-large;
+    margin: 40px;
+}
+h1 {
+    font-size: xx-large;
+
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 40px 0;
+}
+
+@media screen and (min-width: 800px){
+    body {
+        background-color:aliceblue;
+        font-size: large;
+        margin: 80px;
+    }
+
+    /* figure {
+        display: flex;
+        width: 40%;
+    } */
+    figure {
+        float: left;
+        width: 45%;
+        margin-right: 4.5%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color:azure;
+        font-size: medium;
+        margin: 120px;
+        max-width: 1000px;
+    }
+}
