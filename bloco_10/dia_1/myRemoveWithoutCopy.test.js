@@ -7,28 +7,28 @@
 
 const myRemoveWithoutCopy = require('./myRemoveWithoutCopy');
 
-function myRemoveWithoutCopy(arr, item) {
-  for (let index = 0, len = arr.length; index < len; index += 1) {
-    if (arr[index] === item) {
-      arr.splice(index, 1);
-      index -= 1;
-      len -= 1;
-    }
-  }
+describe('myRemoveWithoutCopy', () => {
+  test('Verifique se a chamada myRemoveWithoutCopy', () => {
+    expect( typeof myRemoveWithoutCopy).toBe('function');
+  });
 
-  return arr;
-}
+  test('Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) retorna o array esperado', () => {
+    expect(myRemoveWithoutCopy([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
+  });
 
-// implemente seus testes aqui
-// consulta em https://app.betrybe.com/course/fundamentals/js-unit-tests/js-unit-tests-solutions
-assert.strictEqual(typeof myRemoveWithoutCopy, 'function');
+  test('Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]', () => {
+    expect(myRemoveWithoutCopy([1, 2, 3, 4], 3)).not.toEqual([1, 2, 3, 4]);
+  });
 
-assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4]);
-assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4]);
 
-const testeMyRemove = [1,2,3,4];
 
-myRemoveWithoutCopy(testeMyRemove, 2);
-assert.strictEqual(testeMyRemove.length, 3);
+  test('Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array passado por parâmetro sofreu alterações', () => {
+    const testeMyRemove = [1,2,3,4];
+    myRemoveWithoutCopy(testeMyRemove, 2);
+    expect(testeMyRemove.length).toBe(3);
+  });
 
-assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4]);
+  test('Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado', () => {
+    expect(myRemoveWithoutCopy([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
+  });
+})

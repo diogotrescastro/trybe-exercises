@@ -8,8 +8,25 @@
 const myFizzBuzz = require('./myFizzBuzz');
 // implemente seus testes aqui
 
-assert.strictEqual(myFizzBuzz(30), 'fizzbuzz');
-assert.strictEqual(myFizzBuzz(9), 'fizz');
-assert.strictEqual(myFizzBuzz(25), 'buzz');
-assert.strictEqual(myFizzBuzz(11), 11);
-assert.strictEqual(myFizzBuzz('5'), false);
+describe('myFizzBuss', () => {
+  test('Faça uma chamada com um número divisível por 3 e 5 (30) e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(30)).toBe('fizzbuzz');
+  });
+
+  test('Faça uma chamada com um número divisível por 3 (9)e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(9)).toBe('fizz');
+  });
+
+  test('Faça uma chamada com um número divisível por 5 (25)e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(25)).toBe('buzz');
+  });
+
+  test('Faça uma chamada com um número que não é divisível por 3 ou 5  (11) e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(11)).toBe(11);
+  });
+
+  test('Faça uma chamada com um parâmetro (string) que não é um número e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz('5')).toBe(false);
+  });
+
+})
